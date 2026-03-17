@@ -16,7 +16,7 @@ The system consists of several key components that work together to provide an i
 
 When a message arrives via WhatsApp, Flask processes the request, passes it to the OpenAI API to generate a response, and then uses the WhatsApp Business API to send this response to the user.
 
-[![WhatsApp AI Chatbot Architecture](whatsapp-ai-chatbot-architecture.png)](https://github.com/albertgilopez/chatbot-ai/blob/main/whatsapp-ai-chatbot-arquitectura.png)
+[![WhatsApp AI Chatbot Architecture](whatsapp-ai-chatbot-architecture.png)](https://github.com/smile101603/whatsappbot_OpenAI_Flask/blob/main/whatsapp-ai-chatbot-arquitectura.png)
 
 ### Prerequisites
 
