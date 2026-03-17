@@ -1,54 +1,57 @@
-# Chatbot de WhatsApp con IA
+# WhatsApp Chatbot with AI
 
-Este proyecto implementa un chatbot para WhatsApp utilizando la API de WhatsApp Business, Flask para el backend, y la IA de OpenAI para el procesamiento de lenguaje natural.
+This project implements a chatbot for WhatsApp using the WhatsApp Business API, Flask for the backend, and OpenAI's AI for natural language processing.
 
-## Arquitectura del Proyecto
+## Project Architecture
 
-El sistema se compone de varios componentes clave que trabajan en conjunto para proporcionar una experiencia interactiva a través de WhatsApp:
+The system consists of several key components that work together to provide an interactive experience through WhatsApp:
 
-- Flask Server: Maneja las peticiones HTTP y sirve como el punto de conexión entre WhatsApp y el motor de IA.
-- API de WhatsApp Business: Permite recibir y enviar mensajes a través de WhatsApp.
-- OpenAI API: Se utiliza para generar respuestas inteligentes a partir de las preguntas recibidas.
-- Google Cloud Storage: Almacena y gestiona los vectores de palabras para la IA.
+- Flask Server: Handles HTTP requests and serves as the connection point between WhatsApp and the AI ​​engine.
 
-Cuando un mensaje llega a través de WhatsApp, Flask procesa la solicitud, la pasa a la API de OpenAI para generar una respuesta y luego utiliza la API de WhatsApp Business para enviar esta respuesta al usuario.
+- WhatsApp Business API: Enables receiving and sending messages through WhatsApp.
 
-![Arquitectura WhatsApp AI Chatbot](whatsapp-ai-chatbot-arquitectura.png)
+- OpenAI API: Used to generate intelligent responses from received questions.
 
-### Requisitos Previos
+- Google Cloud Storage: Stores and manages the keywords for the AI.
 
-Para ejecutar este proyecto necesitas:
+When a message arrives via WhatsApp, Flask processes the request, passes it to the OpenAI API to generate a response, and then uses the WhatsApp Business API to send this response to the user.
 
-- Una cuenta de Google Cloud para el almacenamiento de vectores.
-- Una cuenta de desarrollador de Facebook con acceso a la API de WhatsApp Business.
-- Acceso a la API de OpenAI.
+![WhatsApp AI Chatbot Architecture](whatsapp-ai-chatbot-architecture.png)
 
-### Configuración del Proyecto
+### Prerequisites
 
-Variables de Entorno: Configura las siguientes variables de entorno en tu sistema o en un archivo .env:
+To run this project you need:
 
-- WHATSAPP_ACCESS_TOKEN: Tu token de acceso para la API de WhatsApp Business.
-- WHATSAPP_VERIFY_TOKEN: Tu token de verificación para la API de WhatsApp Business.
-- WHATSAPP_API_URL: La URL de la API de WhatsApp Business.
-- OPENAI_SERVICE_URL: La URL de tu servicio que interactúa con la API de OpenAI.
-- GOOGLE_APPLICATION_CREDENTIALS: La ruta al archivo de credenciales de tu cuenta de Google Cloud.
+- A Google Cloud account for vector storage.
 
-**Instalación de Dependencias: Ejecuta pip install -r requirements.txt para instalar las dependencias necesarias.**
+- A Facebook developer account with access to the WhatsApp Business API.
 
-#### Ejecución Local:
+- Access to the OpenAI API.
 
-- Inicia el servidor Flask con python app.py.
-- Asegúrate de que los puertos y las URLs de callback estén configurados correctamente en tus servicios de WhatsApp y OpenAI.
+### Project Configuration
 
-#### Despliegue
+Environment Variables: Configure the following environment variables on your system or in an .env file:
 
-- Para desplegar este bot, puedes utilizar servicios como Heroku, AWS, o Google Cloud. Asegúrate de configurar las variables de entorno en tu plataforma de despliegue.
-- Una vez que el bot esté en funcionamiento, podrá interactuar con los usuarios a través de WhatsApp, responder preguntas y proporcionar información utilizando la inteligencia artificial de OpenAI.
+- WHATSAPP_ACCESS_TOKEN: Your access token for the WhatsApp Business API.
 
-### CONTRIBUIR
+- WHATSAPP_VERIFY_TOKEN: Your verification token for the WhatsApp Business API.
 
-Si tienes ideas, preguntas o deseas discutir sobre las posibilidades de la IA y cómo trabajar juntos para construir soluciones basadas en IAG, no dudes en contactarme:
+- WHATSAPP_API_URL: The URL of the WhatsApp Business API.
 
-- GitHub: [https://github.com/albertgilopez](https://github.com/albertgilopez)
-- LinkedIn: Albert Gil López: [https://www.linkedin.com/in/albertgilopez/](https://www.linkedin.com/in/albertgilopez/)
-- Inteligencia Artificial Generativa (IAG) en español: [https://www.codigollm.es/](https://www.codigollm.es/)
+- OPENAI_SERVICE_URL: The URL of your service that interacts with the OpenAI API.
+
+- GOOGLE_APPLICATION_CREDENTIALS: The path to your Google Cloud account credentials file.
+
+**Installing Dependencies: Run `pip install -r requirements.txt` to install the necessary dependencies.**
+
+#### Local Execution:
+
+- Start the Flask server with `python app.py`.
+
+- Ensure that the ports and callback URLs are correctly configured in your WhatsApp and OpenAI services.
+
+#### Deployment
+
+- To deploy this bot, you can use services such as Heroku, AWS, or Google Cloud. Make sure to configure the environment variables on your deployment platform.
+
+- Once the bot is up and running, it will be able to interact with users via WhatsApp, answer questions, and provide information using OpenAI's artificial intelligence.
